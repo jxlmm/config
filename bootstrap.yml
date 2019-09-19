@@ -16,6 +16,6 @@ spring:
      - test
 ---
 spring:
-  profiles: dev #测试模式
+  profiles: test #测试模式
   application:
     name: springcloud-config-test
