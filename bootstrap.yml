@@ -6,8 +6,8 @@ spring:
 ---
 spring:
   profiles: dev #开发模式
-    application:
-      name: springcloud-config-dev
+  application:
+    name: springcloud-config-dev
  
 ---     
 spring:
@@ -17,5 +17,5 @@ spring:
 ---
 spring:
   profiles: dev #测试模式
-    application:
-      name: springcloud-config-test
+  application:
+    name: springcloud-config-test
