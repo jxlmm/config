@@ -4,18 +4,34 @@ spring:
     active:
     - dev
 ---
+server: 
+  port: 8201
+  
 spring:
   profiles: dev #开发模式
   application:
     name: springcloud-config-dev
  
+eureka: #客户端注册进eureka服务列表
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+    
 ---     
 spring:
   profiles:
     active:
      - test
 ---
+server: 
+  port: 8202
+  
 spring:
   profiles: test #测试模式
   application:
     name: springcloud-config-test
+    
+eureka: #客户端注册进eureka服务列表
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
